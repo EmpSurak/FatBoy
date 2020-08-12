@@ -1,0 +1,25 @@
+<? xml version="1.0" ?>
+<Mod>
+    <Id>com-surak-fatboy</Id> 
+    <Name>FatBoy!</Name> 
+
+    <Category>Script</Category>
+
+    <Thumbnail>Data/Images/fatboy/thumb.jpg</Thumbnail>
+    <PreviewImage>Data/Images/fatboy/thumb.jpg</PreviewImage>
+
+    <Description>Hit an enemy to gain weight, get hit to lose weight. Like in Unreal Tournament!</Description>
+    <Version>1.1.1</Version>
+    <Author>Surak</Author>
+    <Tag>scripting</Tag>
+
+	<SupportedVersion>*</SupportedVersion>
+    <NeedsRestart>false</NeedsRestart>
+    
+    <ModDependency>
+       <Id>com-surak-timed-execution</Id>
+       <Version>0.8.0</Version> 
+    </ModDependency>
+    
+    <LevelHookFile>Data/Scripts/fatboy.as</LevelHookFile>
+</Mod>
