@@ -23,7 +23,7 @@ void Init(string level_name) {
             atoi(_params[2]),
             "p_muscle",
             -1.0f,
-            1.0f,
+            1.5f,
             0.1f,
             0.1f
         );
@@ -35,8 +35,8 @@ void Init(string level_name) {
             atoi(_params[1]),
             atoi(_params[2]),
             "p_ear_size",
-            -1.0f,
-            1.0f,
+            0.5f,
+            1.5f,
             0.1f,
             0.1f
         );
