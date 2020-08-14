@@ -9,16 +9,16 @@
     <PreviewImage>Data/Images/fatboy/thumb.jpg</PreviewImage>
 
     <Description>Hit an enemy to gain weight, get hit to lose weight. Like in Unreal Tournament!</Description>
-    <Version>1.1.1</Version>
+    <Version>1.2.0</Version>
     <Author>Surak</Author>
     <Tag>scripting</Tag>
 
-	<SupportedVersion>*</SupportedVersion>
+    <SupportedVersion>*</SupportedVersion>
     <NeedsRestart>false</NeedsRestart>
     
     <ModDependency>
        <Id>com-surak-timed-execution</Id>
-       <Version>0.8.0</Version> 
+       <Version>0.9.0</Version> 
     </ModDependency>
     
     <LevelHookFile>Data/Scripts/fatboy.as</LevelHookFile>

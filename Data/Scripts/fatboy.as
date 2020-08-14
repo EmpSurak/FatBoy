@@ -1,11 +1,11 @@
 #include "timed_execution/timed_execution.as"
-#include "timed_execution/event_job.as"
+#include "timed_execution/level_event_job.as"
 
 TimedExecution timer;
 
 void Init(string level_name) {
-    timer.Add(EventJob("knocked_over", function(_params){
-        SuckOutLiveEnergy(
+    timer.Add(LevelEventJob("knocked_over", function(_params){
+        TransferCharAttribute(
             atoi(_params[1]),
             atoi(_params[2]),
             "p_fat",
@@ -17,8 +17,8 @@ void Init(string level_name) {
         return true;
     }));
     
-    timer.Add(EventJob("character_thrown", function(_params){
-        SuckOutLiveEnergy(
+    timer.Add(LevelEventJob("character_thrown", function(_params){
+        TransferCharAttribute(
             atoi(_params[1]),
             atoi(_params[2]),
             "p_muscle",
@@ -30,8 +30,8 @@ void Init(string level_name) {
         return true;
     }));
     
-    timer.Add(EventJob("character_attack_missed", function(_params){
-        SuckOutLiveEnergy(
+    timer.Add(LevelEventJob("character_attack_missed", function(_params){
+        TransferCharAttribute(
             atoi(_params[1]),
             atoi(_params[2]),
             "p_ear_size",
@@ -45,7 +45,7 @@ void Init(string level_name) {
 }
 
 void ReceiveMessage(string msg){
-    timer.AddEvent(msg);
+    timer.AddLevelEvent(msg);
 }
 
 void Update() {
@@ -58,9 +58,9 @@ bool HasFocus(){
 
 void DrawGUI() {}
 
-void SuckOutLiveEnergy(int char1_id, int char2_id, string parameter, float min_val, float max_val, float incre, float decre){
-    MovementObject@ char1 = ReadCharacterID(char1_id);
-    MovementObject@ char2 = ReadCharacterID(char2_id);
+void TransferCharAttribute(int id1, int id2, string parameter, float min_val, float max_val, float incre, float decre){
+    MovementObject@ char1 = ReadCharacterID(id1);
+    MovementObject@ char2 = ReadCharacterID(id2);
 
     float char1_val = char1.GetFloatVar(parameter) - decre;
     if(char1_val > min_val && char2.GetIntVar("knocked_out") == _awake){
