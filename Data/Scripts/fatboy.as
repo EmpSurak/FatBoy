@@ -3,7 +3,7 @@
 
 TimedExecution timer;
 
-void Init(string level_name) {
+void Init(string level_name){
     timer.Add(LevelEventJob("knocked_over", function(_params){
         TransferCharAttribute(
             atoi(_params[1]),

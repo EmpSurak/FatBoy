@@ -11,7 +11,9 @@
     <Description>Hit an enemy to gain weight, get hit to lose weight. Like in Unreal Tournament!</Description>
     <Version>1.3.0</Version>
     <Author>Surak</Author>
-    <Tag>scripting</Tag>
+    <Tag>Scripting</Tag>
+    <Tag>Unreal Tournament</Tag>
+    <Tag>Mutator</Tag>
 
     <SupportedVersion>*</SupportedVersion>
     <NeedsRestart>false</NeedsRestart>
