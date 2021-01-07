@@ -9,7 +9,7 @@
     <PreviewImage>Data/Images/fatboy/thumb.jpg</PreviewImage>
 
     <Description>Hit an enemy to gain weight, get hit to lose weight. Like in Unreal Tournament!</Description>
-    <Version>1.3.0</Version>
+    <Version>1.3.1</Version>
     <Author>Surak</Author>
     <Tag>Scripting</Tag>
     <Tag>Unreal Tournament</Tag>
